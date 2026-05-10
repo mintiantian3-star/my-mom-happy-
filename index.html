@@ -239,6 +239,7 @@
             document.getElementById('bubble-text').innerText = "我第一次以这种形式这么庆祝您母亲节快乐，惊不惊喜⌯ᵔ⩊ᵔ⌯ಣ";
             options.style.opacity = "1"; options.style.pointerEvents = "auto";
             audio.play().then(() => audio.pause()); // 激活音频上下文
+            audio.play().catch(err => console.log("自动播放被阻止", err));
         }
         function forceSurprise() { alertModal.style.display = 'flex'; }
         function closeAlert() { alertModal.style.display = 'none'; }
